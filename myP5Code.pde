@@ -5,7 +5,9 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 var fireworkX = 20;
-
+var leftX =200;
+var rightX=250;
+var sunSize=60;
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
@@ -18,9 +20,11 @@ draw = function(){
   
   //🎯Animation Code Goes Here
   rect(fireworkX, 15, 10, 10);
-  
-  fireworkX = fireworkX + 1;
-
+ ellipse(leftX+100,60,60,60);
+ rect(leftX,200,150,20,20);
+  fireworkX = fireworkX + 3;
+  leftX+=2;
+  rightX-=2;
 }
 
 //🟡Extra FUN Features Ms. Hall Added
@@ -33,6 +37,14 @@ showXYPositions = function(){
     textSize(30)
     text("x = " + mouseX + "\ny = " +mouseY, 290, 350)
     fill(255,0,255)
-    ellipse(mouseX, mouseY, 10, 10);
-    fill(255,255,255)
-}
+  //sun 
+    ellipse(400,298, sunSize,sunSize);
+    fill(255,255,255);
+    
+ sunSize=sunSize+20;
+    }
+    
+    
+    
+   
+   
